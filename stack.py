@@ -41,13 +41,13 @@ class Stack:
             self.__Size += 1
             return self
             
-        elif self.__next != None:
+        if self.__next != None:
             self.__next == self.__next.push(self.__data)
             self.__data = data
             self.__Size += 1
             return self
         
-        elif self.__data != None:
+        if self.__data != None:
             self.__next = Stack().push(self.__data)
             self.__data = data
             self.__Size += 1
@@ -91,4 +91,4 @@ class Stack:
     def size(self):
         return self.__Size
         
-#I got some help from Will Reeves with the last section of pop
+#I got some help from Will Reeves with a section of pop
