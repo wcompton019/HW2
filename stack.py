@@ -91,4 +91,4 @@ class Stack:
     def size(self):
         return self.__Size
         
-#I got some help from Will Reeves
+#I got some help from Will Reeves with the last section of pop
