@@ -90,3 +90,5 @@ class Stack:
     # return the number of data objects currently in the stack
     def size(self):
         return self.__Size
+        
+#I got some help from Will Reeves
