@@ -41,17 +41,17 @@ class Stack:
             self.__Size += 1
             return self
             
-        if self.__next != None:
+        elif self.__next != None:
             self.__next == self.__next.push(self.__data)
             self.__data = data
             self.__Size += 1
             return self
         
-        if self.__data != None:
+        elif self.__data != None:
             self.__next = Stack().push(self.__data)
             self.__data = data
             self.__Size += 1
-            return self
+            return self  #not needed forautograder, but helped visualise what was happening and could not get to work without return statement
         
     # return the first piece of data without altering the stack
     # input: nothing
@@ -73,12 +73,15 @@ class Stack:
         if self.__next != None:
             da = self.__data
             self.__data = self.__next.pop()
+            self.__Size -= 1
             return da
             
-        last = self.__data
-        #print(self.__data)
-        self.__data = None
-        return last
+        else:
+            last = self.__data
+            #print(self.__data)
+            self.__data = None
+            self.__Size -= 1
+            return last
     
     # return True if there is no data in the stack
     def empty(self):
